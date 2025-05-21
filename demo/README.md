@@ -39,12 +39,19 @@ mvn spring-boot:run
 4. Fazer uma requisição para o endpoint
 
 POST http://localhost:8080/api/anagrams  
+
+
 Content-Type: application/json
 
 ```json
 {
   "letters": ["a", "b", "c"]
 }
+
+## Ou também no PowerShell
+
+Invoke-RestMethod -Uri "http://localhost:8080/api/anagrams" -Method Post -ContentType "application/json" -Body '{"letters":["a","b","c"]}'
+
 
 ## Casos de teste implementados
 
